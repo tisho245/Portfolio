@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #ff6f61, #6a82fb);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 3px 3px 0px black; /* Enhanced black outline */
+}
+
+h1 {
+    font-size: 2.5em;
+    animation: slideIn 1s forwards;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline-block; 
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff; 
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 1s forwards;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; 
+}
+
+.project {
+    background: rgba(49, 47, 47, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+select {
+    padding: 5px;
+    border: 2px solid #ffd700; /* Border for visibility */
+    border-radius: 5px;
+    background-color:rgba(51, 51, 51, 0.8); /* Black background */
+    text-align: center;
+    color: #ffd700; /* Text color */
+    font-size: 1em;
+    font-weight: bold; /* Bold text */
+    appearance: none; /* Removes default styling */
+    text-shadow: 2px 2px 0px black; /* Black outline for dropdown text */
+}
+
+select:focus {
+    outline: none; /* Remove default outline on focus */
+}
+
+a {
+    color: #ffd700;
+    text-shadow: 2px 2px 0px black; /* Enhanced outline */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.text-outline {
+    text-shadow: 1px 1px 0px black; 
+}
